@@ -1,0 +1,422 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=100%">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="javascript.js"></script>
+  <title>Croquet Hit Tracker</title>
+</head>
+
+<body>
+  <div class="start">
+    <h1>Select Players</h1>
+    <table>
+      <tr>
+        <td>
+          <div id="ck-button1">
+            <label>
+              <input type="checkbox" id="ck1"><span>BLUE</span>
+            </label>
+          </div>
+        </td>
+        <td>
+          <div id="ck-button2">
+            <label>
+              <input type="checkbox" id="ck2"><span>RED</span>
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="ck-button3">
+            <label>
+              <input type="checkbox" id="ck3"><span>BLACK</span>
+            </label>
+          </div>
+        </td>
+        <td>
+          <div id="ck-button4">
+            <label>
+              <input type="checkbox" id="ck4"><span>YELLOW</span>
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="ck-button5">
+            <label>
+              <input type="checkbox" id="ck5"><span>WHITE</span>
+            </label>
+          </div>
+        </td>
+        <td>
+          <div id="ck-button6" id="greenbox">
+            <label>
+              <input type="checkbox" id="ck6"><span>GREEN</span>
+            </label>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div class="container"><button class="playbutton" onclick="playgame()">
+        <h1>Play!</h1>
+      </button></div>
+
+  </div>
+  <div class="gameplay">
+    <button class="tablink" id="bluelnk" onclick="openPage('blue', this, '#1d2433')" disabled>1</button>
+    <button class="tablink" id="redlnk" onclick="openPage('red', this, '#5c0f00')" disabled>2</button>
+    <button class="tablink" id="blacklnk" onclick="openPage('black', this, '#171616')" disabled>3</button>
+    <button class="tablink" id="yellowlnk" onclick="openPage('yellow', this, '#997112')" disabled>4</button>
+    <button class="tablink" id="whitelnk" onclick="openPage('white', this, '#e5e2d9')" disabled>5</button>
+    <button class="tablink" id="greenlnk" onclick="openPage('green', this, '#16210e')" disabled>6</button>
+
+    <div id="blue" class="tabcontent">
+      <h2>Blue</h2>
+      <table>
+        <tr>
+          <td>
+            <div id="ck-buttonb">
+              <label>
+                <input type="checkbox" id="bluelnk" class="me" disabled><span>BLUE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttonr">
+              <label>
+                <input type="checkbox" id="redlnk" disabled><span>RED</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonbk">
+              <label>
+                <input type="checkbox" id="blacklnk" disabled><span>BLACK</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttony">
+              <label>
+                <input type="checkbox" id="yellowlnk" disabled><span>YELLOW</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonw">
+              <label>
+                <input type="checkbox" id="whitelnk" disabled><span>WHITE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttong" id="greenbox">
+              <label>
+                <input type="checkbox" id="greenlnk" disabled><span>GREEN</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="container"><button class="reset" onclick="hoop('blue')" style="background-color:#1d2433;">
+          <h1>Hoop!</h1>
+        </button></div>
+    </div>
+
+    <div id="red" class="tabcontent">
+      <h2>Red</h2>
+      <table>
+        <tr>
+          <td>
+            <div id="ck-buttonb">
+              <label>
+                <input type="checkbox" id="bluelnk" disabled><span>BLUE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttonr">
+              <label>
+                <input type="checkbox" id="redlnk" class="me" disabled><span>RED</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonbk">
+              <label>
+                <input type="checkbox" id="blacklnk" disabled><span>BLACK</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttony">
+              <label>
+                <input type="checkbox" id="yellowlnk" disabled><span>YELLOW</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonw">
+              <label>
+                <input type="checkbox" id="whitelnk" disabled><span>WHITE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttong" id="greenbox">
+              <label>
+                <input type="checkbox" id="greenlnk" disabled><span>GREEN</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="container"><button class="reset" onclick="hoop('red')" style="background-color:#5c0f00;">
+          <h1>Hoop!</h1>
+        </button></div>
+    </div>
+
+    <div id="black" class="tabcontent">
+      <h2>Black</h2>
+      <table>
+        <tr>
+          <td>
+            <div id="ck-buttonb">
+              <label>
+                <input type="checkbox" id="bluelnk" disabled><span>BLUE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttonr">
+              <label>
+                <input type="checkbox" id="redlnk" disabled><span>RED</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonbk">
+              <label>
+                <input type="checkbox" id="blacklnk" class="me" disabled><span>BLACK</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttony">
+              <label>
+                <input type="checkbox" id="yellowlnk" disabled><span>YELLOW</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonw">
+              <label>
+                <input type="checkbox" id="whitelnk" disabled><span>WHITE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttong" id="greenbox">
+              <label>
+                <input type="checkbox" id="greenlnk" disabled><span>GREEN</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="container"><button class="reset" onclick="hoop('black')" style="background-color:#171616;">
+          <h1>Hoop!</h1>
+        </button></div>
+    </div>
+
+    <div id="yellow" class="tabcontent">
+      <h2>Yellow</h2>
+      <table>
+        <tr>
+          <td>
+            <div id="ck-buttonb">
+              <label>
+                <input type="checkbox" id="bluelnk" disabled><span>BLUE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttonr">
+              <label>
+                <input type="checkbox" id="redlnk" disabled><span>RED</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonbk">
+              <label>
+                <input type="checkbox" id="blacklnk" disabled><span>BLACK</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttony">
+              <label>
+                <input type="checkbox" id="yellowlnk" class="me" disabled><span>YELLOW</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonw">
+              <label>
+                <input type="checkbox" id="whitelnk" disabled><span>WHITE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttong" id="greenbox">
+              <label>
+                <input type="checkbox" id="greenlnk" disabled><span>GREEN</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="container"><button class="reset" onclick="hoop('yellow')" style="background-color:#997112;">
+          <h1>Hoop!</h1>
+        </button></div>
+    </div>
+
+    <div id="white" class="tabcontent">
+      <h2>White</h2>
+      <table>
+        <tr>
+          <td>
+            <div id="ck-buttonb">
+              <label>
+                <input type="checkbox" id="bluelnk" disabled><span>BLUE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttonr">
+              <label>
+                <input type="checkbox" id="redlnk" disabled><span>RED</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonbk">
+              <label>
+                <input type="checkbox" id="blacklnk" disabled><span>BLACK</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttony">
+              <label>
+                <input type="checkbox" id="yellowlnk" disabled><span>YELLOW</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonw">
+              <label>
+                <input type="checkbox" id="whitelnk" class="me" disabled><span>WHITE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttong" id="greenbox">
+              <label>
+                <input type="checkbox" id="greenlnk" disabled><span>GREEN</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="container"><button class="reset" onclick="hoop('white')" style="background-color:#e5e2d9; color: black;">
+          <h1>Hoop!</h1>
+        </button></div>
+    </div>
+
+    <div id="green" class="tabcontent">
+      <h2>Green</h2>
+      <table>
+        <tr>
+          <td>
+            <div id="ck-buttonb">
+              <label>
+                <input type="checkbox" id="bluelnk" disabled><span>BLUE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttonr">
+              <label>
+                <input type="checkbox" id="redlnk" disabled><span>RED</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonbk">
+              <label>
+                <input type="checkbox" id="blacklnk" disabled><span>BLACK</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttony">
+              <label>
+                <input type="checkbox" id="yellowlnk" disabled><span>YELLOW</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="ck-buttonw">
+              <label>
+                <input type="checkbox" id="whitelnk" disabled><span>WHITE</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div id="ck-buttong" id="greenbox">
+              <label>
+                <input type="checkbox" id="greenlnk" class="me" disabled><span>GREEN</span>
+              </label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="container"><button class="reset" onclick="hoop('green')" style="background-color:#16210e;">
+          <h1>Hoop!</h1>
+        </button></div>
+    </div>
+  </div>
+</body>
+
+</html>

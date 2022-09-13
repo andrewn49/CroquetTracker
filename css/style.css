@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+html {
+  background-color: #bababa;
+  overflow: hidden;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Carter One', cursive;
+  margin: 0.5em;
+  font-size: 1.5em;
+
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Carter One', cursive;
+}
+
+div.start {
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  width: 95%;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+td {
+  width: 50%;
+}
+
+div.gameplay {
+  display: none;
+  width: 100%;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  color: white;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 1.5em;
+}
+
+.tablink {
+  width: 16.6666669%;
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 1em;
+  font-family: 'Carter One', cursive;
+}
+
+.tablink:disabled {
+  background-color: black;
+  color: gray;
+}
+.tablink:disabled:hover {
+  background-color: black;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#blue {
+  background-color: #1d2433;
+}
+#red {
+  background-color: #5c0f00;
+}
+#black {
+  background-color: #171616;
+}
+#yellow {
+  background-color: #997112;
+}
+#white {
+  background-color: #e5e2d9;
+  color: black;
+}
+#green {
+  background-color: #16210e;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+.start button {
+  float: left;
+  text-align: center;
+  background-color: #bababa;
+  color: black;
+  opacity: 90%;
+  padding: 0em 1em;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: 'Carter One', cursive;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.start button:hover {
+  opacity: 50%
+}
+
+.reset {
+  float: left;
+  text-align: center;
+  color: white;
+  opacity:: 19%;
+  padding: 0.2em 1em;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: 'Carter One', cursive;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.reset:hover {
+  opacity: 50%;
+}
+
+#ck-button1 {
+  background-color: #1d2433;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #1d2433;
+}
+#ck-button1 label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-button1 label input {
+  position: absolute;
+  display: none;
+}
+#ck-button1 input:checked + span {
+  background-color: #414d63;
+  color: white;
+}
+
+#ck-button2 {
+  background-color: #5c0f00;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #5c0f00;
+}
+#ck-button2 label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-button2 label input {
+  position: absolute;
+  display: none;
+}
+#ck-button2 input:checked + span {
+  background-color: #943b18;
+  color: white;
+}
+
+#ck-button3 {
+  background-color: #171616;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #171616;
+}
+#ck-button3 label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-button3 label input {
+  position: absolute;
+  display: none;
+}
+#ck-button3 input:checked + span {
+  background-color: #3d3939;
+  color: white;
+}
+
+#ck-button4 {
+  background-color: #997112;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #997112;
+}
+#ck-button4 label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-button4 label input {
+  position: absolute;
+  display: none;
+}
+#ck-button4 input:checked + span {
+  background-color: #ddba68;
+  color: black;
+}
+
+#ck-button5 {
+  background-color: #e5e2d9;
+  color: black;
+  border-radius: 15px;
+  border: 2px solid #e5e2d9;
+}
+#ck-button5 label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-button5 label input {
+  position: absolute;
+  display: none;
+}
+#ck-button5 input:checked + span {
+  background-color: #fffbf0;
+  color: black;
+}
+
+#ck-button6 {
+  background-color: #16210e;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #16210e;
+}
+#ck-button6 label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-button6 label input {
+  position: absolute;
+  display: none;
+}
+#ck-button6 input:checked + span {
+  background-color: #3b4f2c;
+  color: white;
+}
+
+#ck-buttonb {
+  background-color: #1d2433;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #1d2433;
+}
+#ck-buttonb label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-buttonb label input {
+  position: absolute;
+  display: none;
+}
+#ck-buttonb input:checked + span {
+  background-color: #414d63;
+  color: white;
+}
+
+#ck-buttonr {
+  background-color: #5c0f00;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #5c0f00;
+}
+#ck-buttonr label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-buttonr label input {
+  position: absolute;
+  display: none;
+}
+#ck-buttonr input:checked + span {
+  background-color: #943b18;
+  color: white;
+}
+
+#ck-buttonbk {
+  background-color: #171616;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #171616;
+}
+#ck-buttonbk label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-buttonbk label input {
+  position: absolute;
+  display: none;
+}
+#ck-buttonbk input:checked + span {
+  background-color: #3d3939;
+  color: white;
+}
+
+#ck-buttony {
+  background-color: #997112;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #997112;
+}
+#ck-buttony label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-buttony label input {
+  position: absolute;
+  display: none;
+}
+#ck-buttony input:checked + span {
+  background-color: #ddba68;
+  color: black;
+}
+
+#ck-buttonw {
+  background-color: #e5e2d9;
+  color: black;
+  border-radius: 15px;
+  border: 2px solid #e5e2d9;
+}
+#ck-buttonw label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-buttonw label input {
+  position: absolute;
+  display: none;
+}
+#ck-buttonw input:checked + span {
+  background-color: #fffbf0;
+  color: black;
+}
+
+#ck-buttong {
+  background-color: #16210e;
+  color: white;
+  border-radius: 15px;
+  border: 2px solid #16210e;
+}
+#ck-buttong label span {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  border-radius: 12px;
+}
+#ck-buttong label input {
+  position: absolute;
+  display: none;
+}
+#ck-buttong input:checked + span {
+  background-color: #3b4f2c;
+  color: white;
+}
