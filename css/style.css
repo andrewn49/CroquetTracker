@@ -136,7 +136,7 @@ html {
   float: left;
   text-align: center;
   color: white;
-  opacity:: 19%;
+  opacity: 19%;
   padding: 0.2em 1em;
   position: absolute;
   left: 50%;
@@ -298,6 +298,7 @@ html {
 #ck-buttonb input:checked + span {
   background-color: #414d63;
   color: white;
+  text-decoration: line-through;
 }
 
 #ck-buttonr {
@@ -319,6 +320,7 @@ html {
 #ck-buttonr input:checked + span {
   background-color: #943b18;
   color: white;
+  text-decoration: line-through;
 }
 
 #ck-buttonbk {
@@ -340,6 +342,7 @@ html {
 #ck-buttonbk input:checked + span {
   background-color: #3d3939;
   color: white;
+  text-decoration: line-through;
 }
 
 #ck-buttony {
@@ -361,6 +364,7 @@ html {
 #ck-buttony input:checked + span {
   background-color: #ddba68;
   color: black;
+  text-decoration: line-through;
 }
 
 #ck-buttonw {
@@ -382,6 +386,7 @@ html {
 #ck-buttonw input:checked + span {
   background-color: #fffbf0;
   color: black;
+  text-decoration: line-through;
 }
 
 #ck-buttong {
@@ -403,4 +408,5 @@ html {
 #ck-buttong input:checked + span {
   background-color: #3b4f2c;
   color: white;
+  text-decoration: line-through;
 }
