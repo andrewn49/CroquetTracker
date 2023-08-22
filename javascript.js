@@ -49,37 +49,37 @@ function moveOn(players) {
   var y = document.getElementsByClassName("start");
   x[0].style.display = "initial";
   y[0].style.display = "none";
-  if (players.includes("1") == true) {
+  if (players.includes("1")) {
     var a = document.querySelectorAll("[id='bluelnk']");
     for (var i = 0; i < a.length; i++) {
       a[i].removeAttribute("disabled");
     }
   }
-  if (players.includes("2") == true) {
+  if (players.includes("2")) {
     var a = document.querySelectorAll("[id='redlnk']");
     for (var i = 0; i < a.length; i++) {
       a[i].removeAttribute("disabled");
     }
   }
-  if (players.includes("3") == true) {
+  if (players.includes("3")) {
     var a = document.querySelectorAll("[id='blacklnk']");
     for (var i = 0; i < a.length; i++) {
       a[i].removeAttribute("disabled");
     }
   }
-  if (players.includes("4") == true) {
+  if (players.includes("4")) {
     var a = document.querySelectorAll("[id='yellowlnk']");
     for (var i = 0; i < a.length; i++) {
       a[i].removeAttribute("disabled");
     }
   }
-  if (players.includes("5") == true) {
+  if (players.includes("5")) {
     var a = document.querySelectorAll("[id='whitelnk']");
     for (var i = 0; i < a.length; i++) {
       a[i].removeAttribute("disabled");
     }
   }
-  if (players.includes("6") == true) {
+  if (players.includes("6")) {
     var a = document.querySelectorAll("[id='greenlnk']");
     for (var i = 0; i < a.length; i++) {
       a[i].removeAttribute("disabled");
